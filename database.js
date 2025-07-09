@@ -1,5 +1,7 @@
 const mongoose= require('mongoose');
-const mongodURL='mongodb://localhost:27017/films'
+require('dotenv').config();
+// const mongodURL='mongodb://localhost:27017/films'
+const mongodURL=process.env.db;
 mongoose.connect(mongodURL);
 const db=mongoose.connection;
 db.on('connected',()=>{

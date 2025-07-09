@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const { default: mongoose } = require('mongoose');
 var app=express();
 app.use(bodyParser.json());
+require('dotenv').config();
+const portal=process.env.portal|| 3000;
 //Api
 app.get('/login',(req,res)=>{
 res.send("hi welcome to the films collection");
@@ -17,6 +19,6 @@ const movierecords=require('./routing/movierecordsrouter');
 app.use('/movie',movierecords);
 
 //portal numbers
-app.listen(3000,()=>{
+app.listen(portal,()=>{
     console.log("working prefectly ");
 });
