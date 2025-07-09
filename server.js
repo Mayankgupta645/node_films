@@ -16,7 +16,7 @@ app.use('/person',person);
 const movierecords=require('./routing/movierecordsrouter');
 app.use('/movie',movierecords);
 
-//portal no
+//portal numbers
 app.listen(3000,()=>{
     console.log("working prefectly ");
 });

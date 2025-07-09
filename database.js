@@ -8,4 +8,5 @@ db.on('connected',()=>{
 db.on('disconnected',()=>{
     console.log("mongod is disconnected");
 })
+
 module.exports=db;
